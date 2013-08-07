@@ -1,2 +1,0 @@
-chrome-systeminfo-panel
-=======================
