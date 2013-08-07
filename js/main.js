@@ -53,6 +53,9 @@ chrome.system.storage.getInfo(function(info) {
 						 '<header><i class="icon-hdd"></i></header>'+
 						 '<div><meter id="hdm" max="'+info[0].capacity+'" value="0" data-name="'+dskname+'" data-cap="0"></meter></div>'+
 						 '</div>');
+		var bounder = chrome.app.window.current().getBounds();
+		var newheight =	bounder.height + 40;
+		chrome.app.window.current().setBounds({'height': newheight});
 //		chrome.system.storage.addAvailableCapacityWatch(info[disk].id, function(info) {
 //			if(dbg) console.log(info);
 //			$('#mhd').attr('value', (info.capacity - info.availableCapacity));

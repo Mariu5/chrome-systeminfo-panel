@@ -1,13 +1,13 @@
- * {
-	-webkit-app-region: drag;
-}
-
 body {
 	color: #7f8c8d;
 	background-color: #ecf0f1;
 	font-size: 10px;
 	font-family: Arial;
 	margin: 0;
+}
+
+body > header {
+	-webkit-app-region: drag;
 }
 
 header {

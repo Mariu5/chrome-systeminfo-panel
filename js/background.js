@@ -6,14 +6,15 @@ chrome.app.runtime.onLaunched.addListener(function() {
 		//'transparentBackground': true,
 		'resizable': false,
 		'singleton': true,
-		'maxWidth': 220,
-		'maxHeight': 160
+		'maxWidth': 220/*,
+		'maxHeight': 160*/
 	}, function (appwindow) {
 		console.log('callback');
 		//appwindow.moveTo(0,0);
-		appwindow.onClosed.addListener(function() {
-			console.log('close');
-		});
+		appwindow.setBounds({'height': 120});
+//		appwindow.onClosed.addListener(function() {
+//			console.log('close');
+//		});
 	});
 });
 
