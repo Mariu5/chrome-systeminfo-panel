@@ -1,0 +1,83 @@
+ * {
+	-webkit-app-region: drag;
+}
+
+body {
+	color: #7f8c8d;
+	background-color: #ecf0f1;
+	font-size: 10px;
+	font-family: Arial;
+	margin: 0;
+}
+
+header {
+	font-size: 24px;
+}
+
+.flex-block {
+	display: -webkit-flex;
+	padding: 0 8px;
+}
+
+.flex-block header {
+	padding: 5px 0;
+	width: 30px;
+}
+
+.flex-block div {
+	font-size: 16px;
+	padding: 5px;
+	-webkit-flex: 1;
+}
+
+meter {
+	position: relative;
+	width: 100%;
+	border: 1px solid #7f8c8d;
+	vertical-align: middle;
+}
+
+meter:after {
+	content: attr(data-name) "\00a0\00a0" attr(data-cap);
+	position: absolute;
+	top: 0;
+	left: 10px;
+	font-size: 12px;
+	font-family: Arial;
+	color: #ecf0f1;
+}
+
+meter::-webkit-meter-bar {
+	  background: rgba(255,255,255,0.1);
+}
+
+meter::-webkit-meter-optimum-value {
+	background: #7f8c8d;
+}
+
+meter::-webkit-meter-suboptimum-value {
+	background: #eee;
+}
+
+meter::-webkit-meter-even-less-good-value {
+	background: #999;
+}
+
+#cpu {
+/*display: none;*/
+	padding: 4px 8px;
+}
+
+#cpu span:first-of-type {
+	font-weight: 700;
+}
+
+body > header {
+	border-bottom: 1px solid #bdc3c7;
+	margin-bottom: 5px;
+	padding: 4px 8px;
+}
+
+#model {
+	white-space: nowrap;
+}

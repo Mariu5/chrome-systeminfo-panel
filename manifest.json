@@ -1,0 +1,24 @@
+{
+    "name": "Widget",
+    "description": "ChromeOS Desktop Widget",
+    "manifest_version": 2,
+    "version": "0.0.0.1",
+    "minimum_chrome_version": "28",
+//    "default_locale": "en",
+    "offline_enabled": true,
+    "app": {
+        "background": {
+            "scripts": ["js/background.js"]
+        }
+    },
+    "permissions": [
+        "alarms",
+        "contextMenus",
+	    "experimental",
+        "system.display",
+        "system.memory",
+		"system.storage",
+        "system.cpu"
+    ],
+    "icons": { "16": "img/icon16.png", "128": "img/icon128.png" }
+}
