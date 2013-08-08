@@ -1,4 +1,4 @@
-var dbg = true;
+var dbg = false;
 
 chrome.contextMenus.removeAll(function() {
     chrome.contextMenus.create({
@@ -63,19 +63,10 @@ chrome.system.storage.getInfo(function(info) {
 
 chrome.system.storage.onAvailableCapacityChanged.addListener(function(info) {
 	if(dbg) console.log(info);
-	if(info.length) {
-		for(disk in info) {
-			$('#'+info[disk].id+' #hdm').attr('value',$('#'+info[disk].id+' #hdm').attr('max') - info[disk].availableCapacity);
-			$('#'+info.id+' #hdm').attr('data-cap', Math.round((info[disk].availableCapacity / 1024)/ 1024)+'MB');
-		}
-	}
-	else {
-		$('#'+info.id+' #hdm').attr('value',$('#'+info.id+' #hdm').attr('max') - info.availableCapacity);
-		$('#'+info.id+' #hdm').attr('data-cap', Math.round((info.availableCapacity / 1024)/ 1024)+'MB');
-	}
+	$('#'+info.id+' #hdm').attr('value',$('#'+info.id+' #hdm').attr('max') - info.availableCapacity);
+	$('#'+info.id+' #hdm').attr('data-cap', Math.round((info.availableCapacity / 1024)/ 1024)+'MB');
+
 });
-
-
 
 $(document).ready(function() {
 	memupdate();
