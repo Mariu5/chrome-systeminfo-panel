@@ -10,7 +10,7 @@ body > header {
 	-webkit-app-region: drag;
 }
 
-header {
+header i {
 	font-size: 24px;
 }
 
@@ -64,8 +64,7 @@ meter::-webkit-meter-even-less-good-value {
 }
 
 #cpu {
-/*display: none;*/
-	padding: 4px 8px;
+	padding: 4px 0 4px 8px;
 }
 
 #cpu span:first-of-type {
@@ -73,11 +72,15 @@ meter::-webkit-meter-even-less-good-value {
 }
 
 body > header {
-	border-bottom: 1px solid #bdc3c7;
+	display: flex;
+	width: 204px;
 	margin-bottom: 5px;
-	padding: 4px 8px;
+	padding: 0 8px;
+	border-bottom: 1px solid #bdc3c7;
+	overflow: hidden;
 }
 
-#model {
-	white-space: nowrap;
+body > header > div:nth-of-type(1) {
+	width: 30px;
+	padding: 15px 0;
 }

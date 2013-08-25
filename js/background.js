@@ -8,7 +8,7 @@ chrome.browserAction.onClicked.addListener(function() {
 });
 
 
-//chrome.alarms.create('refresh', {
-//    'when': Date.now(),
-//    'periodInMinutes': 1
-//});
+chrome.alarms.create('refresh', {
+    'when': Date.now(),
+    'periodInMinutes': 1
+});

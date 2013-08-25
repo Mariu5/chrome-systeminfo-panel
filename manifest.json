@@ -1,6 +1,6 @@
 {
-    "name": "Widget",
-    "description": "ChromeOS Desktop Widget",
+    "name": "System Info",
+    "description": "systeminfo api sample",
     "manifest_version": 2,
     "version": "0.0.0.1",
     "minimum_chrome_version": "28",
@@ -10,15 +10,14 @@
 	},
 	"browser_action": {
 		"default_icon": {
-      		"19": "img/icon16.png",
-      		"38": "img/icon128.png"
+      		"19": "img/icon19.png",
+      		"38": "img/icon38.png"
     	},
 		"default_title": "System Info"
 	},
     "permissions": [
         "alarms",
         "contextMenus",
-//	    "experimental",
         "system.display",
         "system.memory",
 		"system.storage",
